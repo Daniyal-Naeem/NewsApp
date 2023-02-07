@@ -6,7 +6,6 @@ import SplashScreen from '@Screen/SplashScreen';
 import Login from '@Screen/Login';
 import Register from '@Screen/Register';
 import Onboarding from '@Screen/Onboarding';
-import CategoryList from '@Screen/CategoryList';
 import About from '@Screen/About';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -27,7 +26,6 @@ const AuthStack = ({...props}) => {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={Register} />
             <Stack.Screen name="Onboarding" component={Onboarding} />
-            <Stack.Screen name="CategoryList" component={CategoryList} />
             <Stack.Screen name="About" component={About} />
         </Stack.Navigator>
     )

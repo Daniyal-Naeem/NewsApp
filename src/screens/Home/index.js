@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import React, {useEffect, useState} from "react";
 import {SafeAreaView, FlatList,StyleSheet, View, Text} from "react-native";
 import Article from "../../components/Artical";
-import SearchBar from '../../components/SearchBar'
 import axios from "axios";
 
 
@@ -12,27 +11,13 @@ const Home = ({...props}) => {
         console.log("props ", props);
     }, []);
 
-    const [filterdata, setFilterdata] = useState([]);
-    const [search, setSearch] = useState('');
     const [articles,setArticles] = useState([]);
-
-    const searchFilter = (text) => {
-        const newData = filterdata.filter(item => {
-          const itemData = item.title ? item.title.toUpperCase() : ''.toLowerCase();
-          const textData = text.toUpperCase();
-          return itemData.indexOf(textData) > -1
-        });
-    
-        setArticles(newData)
-        setSearch(text)
-      }
 
     const getNews = () => {
         axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=Vg0C0KmD5NRHKurRSJuBES5M9J3RilKo')
             .then( (response) =>{
                 // handle success
                 setArticles(response.data.results);
-                setFilterdata(response.data.results);
             })
             .catch(function (error) {
                 // handle error
@@ -50,10 +35,6 @@ const Home = ({...props}) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={{alignItems:'center', padding:10}}><Text style={{fontSize:16, fontWeight:'bold'}}>Top Stories</Text></View>
-            
-            <SearchBar 
-            value={search}
-            onChangeText={(text) => searchFilter(text)}/>
             
             <FlatList
                 data={articles}

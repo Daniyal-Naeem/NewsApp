@@ -104,6 +104,7 @@ const Login = ({...props}) => {
                                                         style={{ height: scale(50), color: text, width: '93%' }}
                                                         name="password"
                                                         onChangeText={handleChange('password')}
+                                                        placeholderTextColor={text}
                                                     />
 
                                                     {(errors.password && touched.password) &&

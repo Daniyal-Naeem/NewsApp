@@ -130,7 +130,7 @@ const Register = () => {
                                         <View style={styles(background, text, lightGray5).input}>
 
                                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                                <View>
+                                               
                                                     <TextInput
                                                         placeholder="Enter Password"
                                                         secureTextEntry={showPassword}
@@ -143,7 +143,7 @@ const Register = () => {
                                                     {(errors.password && touched.password) &&
                                                         <Text style={{ fontSize: scale(10), color: 'red', marginTop: scale(5) }}>{errors.password}</Text>
                                                     }
-                                                </View>
+                                                
 
 
                                                 <TouchableOpacity 

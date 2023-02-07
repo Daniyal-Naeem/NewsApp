@@ -9,7 +9,7 @@ import {
 import WebView from "react-native-webview";
 import {useRoute} from '@react-navigation/native';
 
-const Favorite = () => {
+const NewsDetail = () => {
     const {params} = useRoute();
     const [change, setOnChange] = useState(false);
     const webviewRef = useRef(null);
@@ -61,4 +61,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Favorite;
+export default NewsDetail;

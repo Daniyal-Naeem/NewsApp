@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 const Article = ({...props}) => {
     const navigation = useNavigation();
     return(
-        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('Favorite',{URL:props.url})}>
+        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('NewsDetail',{URL:props.url})}>
             {/* image */}
             {/* <Image source={{
                 uri: props.url }}

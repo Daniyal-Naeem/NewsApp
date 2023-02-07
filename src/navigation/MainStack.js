@@ -3,7 +3,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Tabs from './Tabs';
 import SplashScreen from '@Screen/SplashScreen';
 import NewsDetails from '@Screen/NewsDetails';
-import CategoryList from '@Screen/CategoryList';
 import About from '@Screen/About';
 
 
