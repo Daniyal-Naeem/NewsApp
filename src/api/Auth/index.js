@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Login User
 export const loginUser = (values) => {
-    const url = 'http://localhost:8000/auth/login';
+    const url = 'http://192.168.18.15:8000/auth/login';
 
     return axios.post(url, values)
         .then(response => response.data);
@@ -11,7 +11,7 @@ export const loginUser = (values) => {
 
 // Register User
 export const registerUser = (values) => {
-    const url = 'http://localhost:8000/auth/register';
+    const url = 'http://192.168.18.15:8000/auth/register';
 
     return axios.post(url, values)
         .then(response => response.data);
