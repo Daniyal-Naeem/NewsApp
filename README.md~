@@ -1,1 +1,20 @@
 # NewsApp
+
+1. Go to the project root directory timenews and write the following cammands: 
+   
+   - npm install  ( to install all the packages and dependencies)
+   - react-native start (to start the project)
+
+2. Again open the separate root directory and run the cammand:
+   
+   - react-native run-android (to run the app on debug mode on and emulator)
+
+3. No go to run the backend localhost server by using the cammand:
+   
+   - cd fake-api-jwt-json-server
+   - npm install (to install all the packages and dependencies) 
+   - npm run start-auth (to run the backend server on localhost:8000)
+
+4. In api/Auth/index file add your "IPv4 address" in api url, mine is http://192.168.18.15:8000/auth/login change for both apis
+
+5. After following these steps test the app and do let me know if their is any query 
