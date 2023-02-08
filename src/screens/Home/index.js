@@ -40,7 +40,7 @@ const Home = ({...props}) => {
                 data={articles}
                 renderItem = {({item}) =>
                     <Article
-                        urlToImage = {item.multimedia.url}
+                        // urlToImage = {item.multimedia.url}
                         title = {item.title}
                         description = {item.abstract}
                         author = {item.byline}
